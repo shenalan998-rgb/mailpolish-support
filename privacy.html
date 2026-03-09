@@ -2,54 +2,72 @@
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>邮件润色 - 隐私政策</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MailPolish 隐私政策</title>
   <style>
-    body{margin:0;padding:32px 18px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8;background:#0b1220;color:#eaf0ff;}
-    .wrap{max-width:860px;margin:0 auto;}
-    h1{font-size:24px;margin:0 0 12px;}
-    h2{font-size:16px;margin:24px 0 8px;}
-    p,li{color:#b7c3e6;font-size:14px;}
-    a{color:#4da3ff;text-decoration:none;}
-    a:hover{text-decoration:underline;}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;}
-    .box{border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px 16px;background:rgba(18,28,48,.92);}
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; padding:20px; max-width:900px; margin:0 auto; line-height:1.6 }
+    h1,h2 { color:#0b66ff }
+    a{ color:#0b66ff }
+    .muted{ color:#666 }
+    .section{ margin-bottom:18px }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <h1>隐私政策（Privacy Policy）</h1>
-    <p>更新时间：<span class="mono">2026-03-09</span></p>
+  <h1>MailPolish 隐私政策</h1>
+  <p class="muted">版本：1.0 &nbsp;·&nbsp; 最后更新：2026-03-09</p>
 
-    <div class="box">
-      <p><strong>邮件润色 · 商务邮件 AI 助手</strong>（以下简称“本应用”）重视用户隐私与数据安全。本政策说明我们如何处理你在使用本应用时提供的信息。</p>
-    </div>
-
+  <div class="section">
     <h2>1. 我们收集哪些信息</h2>
+    <p>为提供邮件润色功能，我们可能会收集并处理：</p>
     <ul>
-      <li><strong>你输入的文本内容</strong>：用于生成润色建议/优化结果。</li>
-      <li><strong>基础设备信息（可选）</strong>：用于故障排查（如 iOS 版本、App 版本）。</li>
+      <li><strong>用户提供的文本</strong>：你在应用中输入或粘贴的邮件内容，用于生成润色结果。</li>
+      <li><strong>诊断信息（可选）</strong>：用于排查问题的基础设备信息，如 iOS 版本、App 版本等（通常以匿名/聚合形式使用）。</li>
     </ul>
-
-    <h2>2. 信息如何被使用</h2>
-    <ul>
-      <li>用于提供“润色/改写/建议”等核心功能。</li>
-      <li>用于改进产品体验与排查问题（例如崩溃分析）。</li>
-      <li>我们不会将你的文本用于向你投放个性化广告。</li>
-    </ul>
-
-    <h2>3. AI 处理与第三方服务</h2>
-    <p>为实现润色功能，你提交的文本可能会被发送至服务端或第三方 AI 服务进行处理（取决于你的产品实现与配置）。我们建议你避免输入敏感信息（如密码、银行卡号、身份证号、商业机密等）。</p>
-
-    <h2>4. 数据保存与删除</h2>
-    <p>我们尽量最小化保存。若你希望删除与支持相关的沟通记录，可通过支持邮箱联系我们。</p>
-
-    <h2>5. 联系我们</h2>
-    <p>如对本隐私政策有任何疑问，请联系：mailto:shengzd@yeah.netshengzd@yeah.net</a></p>
-
-    <p style="margin-top:28px;color:#b7c3e6;font-size:12px;opacity:.9;">
-      © 2026 邮件润色。保留所有权利。
-    </p>
   </div>
+
+  <div class="section">
+    <h2>2. 我们如何使用这些信息</h2>
+    <ul>
+      <li>用于生成润色/改写结果并返回给你。</li>
+      <li>用于改进服务质量、排查故障与分析崩溃（通常为匿名或聚合统计）。</li>
+      <li>不会用于向你投放个性化广告（除非你额外授权）。</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>3. 第三方处理与服务器代理</h2>
+    <p>当你使用润色功能时，应用会通过 HTTPS 将文本请求发送到我们的服务器；服务器会将请求转发到第三方 AI 服务（如适用）。我们不会在客户端中嵌入长期第三方密钥；建议的部署是使用服务器端代理来保护密钥。</p>
+    <p>第三方服务的具体数据使用与保留策略由第三方控制，若需了解第三方如何处理数据，请参阅其隐私政策（如适用）。</p>
+  </div>
+
+  <div class="section">
+    <h2>4. 数据保留与删除</h2>
+    <p>历史记录默认保存在设备本地（UserDefaults 或本地存储）。你可以在应用设置中手动删除历史记录。</p>
+    <p>如果你希望我们协助删除服务器端或第三方可能存在的日志（如你在支持邮件中提供了相应交互内容），请通过支持邮箱联系我们（见下）。</p>
+  </div>
+
+  <div class="section">
+    <h2>5. 撤销同意</h2>
+    <p>你可以随时在应用设置中撤销对隐私政策的同意。撤销后应用会立即：</p>
+    <ul>
+      <li>清除本地保存的历史记录；</li>
+      <li>重置本地的使用计数与配额；</li>
+      <li>停止向第三方发送新请求（除非你重新同意）。</li>
+    </ul>
+    <p>（在 App 内：打开 <em>设置 → 隐私/数据管理 → 撤销同意</em>）</p>
+  </div>
+
+  <div class="section">
+    <h2>6. 联系方式</h2>
+    <p>如需行使你的权利或有隐私相关问题，请联系：<a href="mailto:shengzd@yeah.net">shengzd@yeah.net</a></p>
+  </div>
+
+  <div class="section muted">
+    <p>注意：请勿在应用内或通过支持邮件提交身份证号、银行卡号、密码或其他高度敏感信息。此政策可能会不时更新，重大变更将在应用中或网站上公布。</p>
+  </div>
+
+  <footer class="muted">
+    © 2026 MailPolish Team
+  </footer>
 </body>
 </html>
