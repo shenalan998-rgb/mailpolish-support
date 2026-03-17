@@ -5,58 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MailPolish 支持与帮助</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111; padding:20px; max-width:900px; margin:0 auto; line-height:1.6 }
-    h1,h2 { color:#0b66ff }
-    a{ color:#0b66ff }
-    .muted{ color:#666 }
-    .section{ margin-bottom:18px }
-    .note{ background:#fffbeb; border-left:4px solid #ffd27f; padding:10px; margin:12px 0 }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial; color:#111; padding:20px; max-width:900px; margin:0 auto; line-height:1.7 }
+    h1,h2,h3 { color:#0b66ff }
+    a { color:#0b66ff }
+    .muted { color:#666 }
+    .section { margin-bottom:20px }
+    .note { background:#fffbeb; border-left:4px solid #ffd27f; padding:12px; margin:14px 0 }
   </style>
 </head>
 <body>
-  <h1>邮件润色 · 商务邮件 AI 助手 — 支持</h1>
+  <h1>MailPolish 支持与帮助</h1>
 
-  <p>本页面为技术支持与常见问题页面。若遇使用问题或需反馈，请通过以下方式联系我们。</p>
+  <p>本页面用于提供技术支持、常见问题和隐私说明摘要。若你在使用 MailPolish 时遇到问题，或对数据处理方式有疑问，可通过本页信息联系我们。</p>
 
   <div class="section">
     <h2>联系技术支持</h2>
     <p>支持邮箱：<a href="mailto:shengzd@yeah.net">shengzd@yeah.net</a></p>
-    <p class="muted">我们通常在 1-2 个工作日内回复。请在邮件中包含设备型号、iOS 版本、App 版本、以及问题描述/截图/录屏（如有）。</p>
+    <p class="muted">我们通常会在 1-2 个工作日内回复。建议在邮件中附上设备型号、iOS 版本、App 版本，以及问题描述、截图或录屏（如有）。</p>
   </div>
 
   <div class="section">
     <h2>常见问题（FAQ）</h2>
-    <h3>为什么润色结果和我预期不一致？</h3>
-    <p>AI 结果受输入文本与语气选择影响；建议在提示中明确：语气（正式/友好/简洁）、对象（客户/领导/同事）与用途（跟进/催办/汇报）。</p>
 
-    <h3>能否保证内容绝对准确？</h3>
-    <p>本应用提供写作辅助与建议，不保证结果完全无误。请在发送前自行校对关键信息（日期、金额、姓名等）。</p>
+    <h3>1. 为什么润色结果和我预期不一致？</h3>
+    <p>AI 结果会受到输入内容、语言、语气和长度选项的影响。建议在原文中尽量明确收件对象、用途和希望表达的重点。</p>
 
-    <h3>如何申请新功能或模板？</h3>
-    <p>欢迎通过支持邮箱提交需求，我们会评估并优先考虑常见场景。</p>
+    <h3>2. 能否保证结果绝对准确？</h3>
+    <p>不能。MailPolish 提供的是写作辅助与润色建议，不保证结果绝对无误。请在发送前自行核对日期、金额、姓名、合同条款等关键信息。</p>
+
+    <h3>3. 如果我不想把内容发给第三方 AI，可以继续使用吗？</h3>
+    <p>不可以。邮件润色功能依赖第三方 AI 服务处理，因此在首次使用前，应用会先明确告知数据发送范围、接收方和用途，并要求你点击“同意并继续”后才会发送。</p>
+
+    <h3>4. 可以撤销同意吗？</h3>
+    <p>可以。你可以在应用的“设置”中撤销同意。撤销后，应用会停止未来新的 AI 请求；但无法撤回此前已经发送到 MailPolish 代理或 DeepSeek 的请求。</p>
   </div>
 
   <div class="section">
     <h2>隐私与数据说明（摘要）</h2>
     <ul>
-      <li>历史记录保存在设备本地（仅用户设备）。</li>
-      <li>应用会通过 HTTPS 将请求发送到我们的服务器；服务器可能将请求转发到第三方 AI 服务以获得润色结果。</li>
-      <li>客户端不会包含长期第三方密钥；我们建议并采用服务器端代理来保护密钥。</li>
-      <li>请勿在应用或邮件中提交身份证、银行卡、密码或其他高度敏感信息。</li>
+      <li>历史记录默认仅保存在设备本地（仅用户设备）。</li>
+      <li>当你点击“开始润色”且已明确同意后，应用会通过 HTTPS 发送以下内容：邮件正文、可选主题、语言/语气/长度选项。</li>
+      <li>上述润色请求会先发送到 <strong>MailPolish 服务器代理</strong>，再由代理转发给 <strong>DeepSeek</strong> 生成结果。</li>
+      <li><strong>App Store 收据</strong> 仅用于订阅鉴权，只会发送到 MailPolish 代理的鉴权接口，不会发送给 DeepSeek。</li>
+      <li>客户端不会包含长期第三方 API 密钥；MailPolish 使用服务器端代理保护密钥，并执行鉴权与安全控制。</li>
+      <li>你可以在应用设置中撤销对未来发送的同意；撤销不会影响此前已经发送的请求。</li>
+      <li>请勿在应用或支持邮件中提交身份证号、银行卡号、密码、医疗信息或其他高度敏感信息。</li>
     </ul>
     <p>完整隐私政策：<a href="https://shenalan998-rgb.github.io/mailpolish-support/privacy.html" target="_blank" rel="noopener">https://shenalan998-rgb.github.io/mailpolish-support/privacy.html</a></p>
   </div>
 
   <div class="section">
+    <h2>审核与隐私说明</h2>
+    <p>若你是 App Review 团队成员，可通过以下路径验证隐私披露与同意机制：</p>
+    <ol>
+      <li>全新安装应用，或先在“设置”中撤销同意后重新启动；</li>
+      <li>启动后查看同意界面，其中会明确说明发送哪些数据、发送给谁（MailPolish 代理与 DeepSeek）、以及仅在同意后才会发送；</li>
+      <li>点击隐私政策链接，查看与应用内一致的公开政策说明；</li>
+      <li>同意后发起一次示例润色请求；</li>
+      <li>进入设置页验证“撤销同意”功能。</li>
+    </ol>
+  </div>
+
+  <div class="section">
     <h2>关于本应用</h2>
-    <p>应用名：MailPolish - 商务邮件 AI 助手<br>
-       平台：iOS<br>
-       版本：1.0.0<br>
-       更新时间：2026-03-09</p>
+    <p>
+      应用名：MailPolish - 商务邮件 AI 助手<br>
+      平台：iOS<br>
+      版本：1.0.1<br>
+      更新时间：2026-03-17
+    </p>
   </div>
 
   <div class="note">
-    <strong>提示：</strong>如需我们协助删除服务器端或第三方可能存在的相关日志，请通过支持邮箱联系，并在邮件中提供相应的请求与说明。
+    <strong>提示：</strong>如需我们协助处理 MailPolish 代理侧可能存在的日志或请求记录，请通过支持邮箱联系；第三方 AI 服务（DeepSeek）的独立处理规则请同时参考其公开隐私政策。
   </div>
 
   <footer class="muted">© 2026 MailPolish Team</footer>
