@@ -5,78 +5,119 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MailPolish 隐私政策</title>
   <style>
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; padding:20px; max-width:900px; margin:0 auto; line-height:1.6 }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; color:#111; padding:20px; max-width:900px; margin:0 auto; line-height:1.7 }
     h1,h2 { color:#0b66ff }
-    a{ color:#0b66ff }
-    .muted{ color:#666 }
-    .section{ margin-bottom:18px }
-    .note{ background:#fffbeb; border-left:4px solid #ffd27f; padding:10px; margin:12px 0 }
+    a { color:#0b66ff }
+    .muted { color:#666 }
+    .section { margin-bottom:20px }
+    .note { background:#fffbeb; border-left:4px solid #ffd27f; padding:12px; margin:14px 0 }
   </style>
 </head>
 <body>
   <h1>MailPolish 隐私政策</h1>
-  <p class="muted">版本：1.0 &nbsp;·&nbsp; 最后更新：2026-03-09</p>
+  <p class="muted">版本：1.1 &nbsp;·&nbsp; 最后更新：2026-03-17</p>
+
+  <div class="note">
+    <strong>核心说明：</strong>当你点击“开始润色”且已经明确同意后，MailPolish 会将你主动输入的邮件正文、可选主题和优化选项通过 MailPolish 服务器代理发送给 <strong>DeepSeek</strong>，用于生成润色结果。未同意前不会发送这些内容。
+  </div>
 
   <div class="section">
-    <h2>1. 我们收集哪些信息</h2>
-    <p>为提供邮件润色功能，本应用及其服务可能会处理以下信息：</p>
+    <h2>1. 我们收集或处理哪些信息</h2>
     <ul>
-      <li><strong>用户提供的文本</strong>：你在应用中输入或粘贴的邮件内容（用于生成润色结果）。</li>
-      <li><strong>诊断信息（可选）</strong>：用于排查问题的基础设备信息，如 iOS 版本、App 版本（通常以匿名/聚合形式使用）。</li>
+      <li><strong>邮件正文</strong>：你在应用中输入或粘贴的邮件内容。</li>
+      <li><strong>可选主题</strong>：你在主题输入框中填写的内容。</li>
+      <li><strong>优化选项</strong>：你选择的语言、语气和长度设置。</li>
+      <li><strong>订阅鉴权信息</strong>：App Store 收据，仅用于向 MailPolish 代理申请短期鉴权令牌，不会发送给 DeepSeek。</li>
+      <li><strong>使用与诊断信息</strong>：如每日用量、请求是否成功、iOS 版本、App 版本、设备型号等，用于额度控制、故障排查和安全审计。</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>2. 信息如何被使用</h2>
+    <h2>2. 信息如何收集</h2>
     <ul>
-      <li>用于生成润色/改写结果并返回给你。</li>
-      <li>用于改进服务质量、排查故障与分析崩溃（通常为匿名或聚合统计）。</li>
-      <li>不会用于向你投放个性化广告（除非你另行授权）。</li>
+      <li>邮件正文、可选主题和优化选项由你主动输入或选择。</li>
+      <li>App Store 收据由 iOS 在设备上生成；应用只会在需要订阅鉴权时读取，并通过 HTTPS 发送到 MailPolish 代理的 <code>/auth</code> 接口。</li>
+      <li>使用和诊断信息会在你使用应用、发起请求或发生错误时自动生成。</li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>3. 第三方处理与服务器代理</h2>
-    <p>当你使用润色功能时，应用会通过 HTTPS 将请求发送到我们的服务器；服务器可能会将请求转发到第三方 AI 服务以获得润色结果。我们不会在客户端中嵌入长期第三方密钥；建议并采用服务器端代理来保护长期密钥。</p>
-    <p>第三方服务可能会按照其自身隐私政策处理请求数据。若需要了解第三方的具体处理和保留策略，请查阅第三方服务的隐私政策。</p>
-  </div>
-
-  <div class="section">
-    <h2>4. 数据保留与删除</h2>
-    <p>本地历史记录默认保存在设备上（UserDefaults 或其他本地存储），你可以在应用设置中删除历史记录。</p>
-    <p>服务器端或第三方可能会对请求日志或处理结果做短期保留，用于请求处理、调试或改进服务；通常仅在完成处理或故障排查后保留一定期限。如果你希望我们协助删除服务器端或第三方可能存在的记录，请通过下文的支持邮箱联系我们，我们将在合理时间内配合处理或提供删除流程。</p>
-  </div>
-
-  <div class="section">
-    <h2>5. 撤销同意</h2>
-    <p>你可以随时在应用设置中撤销对隐私政策的同意。撤销后应用会立即采取以下操作：</p>
+    <h2>3. 信息会发送给谁</h2>
+    <p>当你发起润色请求且已同意后，数据传输路径如下：</p>
+    <p><strong>App → MailPolish 服务器代理 → DeepSeek</strong></p>
     <ul>
-      <li>清除本地保存的历史记录；</li>
-      <li>重置本地的使用计数与配额；</li>
-      <li>停止向第三方发送新的润色请求（除非你重新同意）。</li>
+      <li>邮件正文、可选主题和优化选项：发送到 MailPolish 代理，并由代理转发给 DeepSeek API。</li>
+      <li>App Store 收据：仅发送到 MailPolish 代理，用于订阅鉴权；<strong>不会发送给 DeepSeek</strong>。</li>
     </ul>
-    <p>（在 App 内的路径示例：打开 <em>设置 → 隐私/数据管理 → 撤销同意</em>）</p>
+    <p>MailPolish 代理用于保护长期服务密钥、执行鉴权、防滥用和安全控制。第三方 AI 接收方为 <strong>DeepSeek</strong>。</p>
   </div>
 
   <div class="section">
-    <h2>6. 我们如何保护你的数据</h2>
-    <p>我们采用 HTTPS/TLS 加密传输请求，服务端和第三方通信均通过受保护的通道完成。本地数据仅存储在设备沙盒内，未经你的同意不会上传为其他用途。</p>
+    <h2>4. 我们如何使用这些信息</h2>
+    <ul>
+      <li>生成并返回润色后的邮件结果。</li>
+      <li>根据你选择的语言、语气和长度生成对应风格的输出。</li>
+      <li>完成订阅鉴权、额度控制、防滥用、安全审计和故障排查。</li>
+      <li>在法律要求、合规义务或安全风险处置场景下进行必要处理。</li>
+    </ul>
+    <p>我们不会出售你的个人信息，也不会将邮件正文用于个性化广告。</p>
   </div>
 
   <div class="section">
-    <h2>7. 儿童隐私</h2>
+    <h2>5. 用户同意</h2>
+    <p>在首次使用邮件润色功能前，应用会显示单独的同意界面，明确说明：</p>
+    <ul>
+      <li>会发送哪些数据</li>
+      <li>数据会发送给谁（MailPolish 代理和 DeepSeek）</li>
+      <li>发送目的是什么</li>
+    </ul>
+    <p>只有在你点击“同意并继续”后，应用才会发送新的邮件正文、可选主题和优化选项。</p>
+  </div>
+
+  <div class="section">
+    <h2>6. 撤销同意</h2>
+    <p>你可以随时在应用的“设置”中撤销同意。撤销后：</p>
+    <ul>
+      <li>应用会停止新的邮件润色发送；</li>
+      <li>本地同意记录会被清除；</li>
+      <li>你可以之后重新查看并再次同意。</li>
+    </ul>
+    <p><strong>请注意：</strong>撤销仅影响未来发送，不能撤回此前已经发送到 MailPolish 代理或 DeepSeek 的请求。</p>
+  </div>
+
+  <div class="section">
+    <h2>7. 数据保留</h2>
+    <ul>
+      <li><strong>本地历史记录</strong>：默认仅保存在你的设备本地，你可以在应用中手动删除。</li>
+      <li><strong>MailPolish 代理</strong>：可能短期保留必要的请求日志、鉴权日志或安全审计记录，以保证服务稳定与防滥用。</li>
+      <li><strong>DeepSeek</strong>：作为第三方 AI 服务提供方，可能根据其自身隐私政策对请求进行临时存储、日志记录、安全审计或服务改进。</li>
+    </ul>
+    <p>第三方保留期限和处理规则由其自身政策决定。我们建议你同时查阅其公开隐私政策。</p>
+  </div>
+
+  <div class="section">
+    <h2>8. 第三方保护</h2>
+    <p>我们要求服务提供方采取不低于行业常见标准的安全保护措施，例如 HTTPS/TLS、访问控制和最小化处理原则。但第三方仍会按照其自身政策独立处理收到的数据，因此请在提交内容前自行评估风险。</p>
+  </div>
+
+  <div class="section">
+    <h2>9. 我们如何保护你的数据</h2>
+    <p>我们采用 HTTPS/TLS 加密传输、设备沙盒、本地最小化存储、短期鉴权令牌以及不在客户端嵌入长期第三方 API 密钥等措施来保护你的数据。但任何系统都无法保证绝对 100% 安全。</p>
+  </div>
+
+  <div class="section">
+    <h2>10. 儿童隐私</h2>
     <p>本应用不面向 13 岁以下儿童。如果我们在无意间收集了 13 岁以下儿童的信息，我们将采取合理措施尽快删除这些信息。</p>
   </div>
 
   <div class="section">
-    <h2>8. 联系我们</h2>
-    <p>如需行使你的隐私权或有隐私相关问题，请通过电子邮件联系：
-      <a href="mailto:shengzd@yeah.net">shengzd@yeah.net</a>
-    </p>
+    <h2>11. 联系我们</h2>
+    <p>如需行使隐私权、咨询删除流程或反馈隐私问题，请联系：<a href="mailto:shengzd@yeah.net">shengzd@yeah.net</a></p>
+    <p>支持页面：<a href="https://shenalan998-rgb.github.io/mailpolish-support/">https://shenalan998-rgb.github.io/mailpolish-support/</a></p>
   </div>
 
   <div class="note">
-    <strong>重要提示：</strong>请勿在应用内或通过支持邮件提交身份证号、银行卡号、密码或其他高度敏感信息。
+    <strong>重要提示：</strong>请勿在应用内或通过支持邮件提交身份证号、银行卡号、密码、医疗信息或其他高度敏感信息。
   </div>
 
   <footer class="muted">© 2026 MailPolish Team</footer>
